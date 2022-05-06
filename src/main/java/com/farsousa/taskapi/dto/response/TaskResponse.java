@@ -20,7 +20,10 @@ public class TaskResponse {
 		this.description = task.getDescription();
 		this.status = task.getStatus() + "";
 		this.criationDate = task.getCriationDate() + "";
-		this.conclusionDate = task.getConclusionDate() + "";
+		if(task.getConclusionDate() == null)
+			this.conclusionDate = "";
+		else
+			this.conclusionDate = task.getConclusionDate() + "";
 	}
 	
 	public static List<TaskResponse> convertTaskListToTaskResponseList(List<Task> tasks) {
