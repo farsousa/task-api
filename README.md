@@ -1,5 +1,5 @@
 # TaskApi
-Projeto para gerenciamento de tarefas em relação ao seu progresso: aberto, fazendo, concluído.
+Projeto backend para gerenciamento de tarefas em relação ao seu progresso: aberto, fazendo, concluído.
 
 ## Ferramentas
 * Spring Boot
