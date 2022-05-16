@@ -87,8 +87,13 @@ public class TaskController {
 						task.setStatus(StatusTask.Concluída);
 						task.setConclusionDate(LocalDate.now());
 					}else {
-						task.setStatus(StatusTask.Aberta);
-						task.setConclusionDate(null);
+						if (taskRequestUpdate.getStatus().equals("Pausada")) {
+							task.setStatus(StatusTask.Pausada);
+							task.setConclusionDate(null);
+						}else {
+							task.setStatus(StatusTask.Aberta);
+							task.setConclusionDate(null);
+						}
 					}
 				}
 			}			
